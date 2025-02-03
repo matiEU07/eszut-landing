@@ -9,36 +9,53 @@
     <title>About ESZUT</title>
 
     <script>
-        loop = 0
-        letters=["q", "w", "e", "r", "t", "y", "u"]
-
-        window.onload = function () {
-        refresh(); // Run immediately on refresh
-        setInterval(refresh, 2000); // Repeat every 1 second
-    };
+    window.onload = function () {
+    const scrollText = document.getElementById("scroll");
+    const letters = ["q", "w", "e", "r", "t", "y", "u"];
+    let loop = 0;
 
     function refresh() {
-        scrollText = document.getElementById("scroll")
-        loop++
-        if(loop>6) {loop=0}
-        console.log(loop)
-        if (loop>0) scrollText.classList.remove(letters[loop-1]); else scrollText.classList.remove(letters[6])
+        scrollText.classList.remove(letters[(loop - 1 + letters.length) % letters.length]); 
         scrollText.classList.add(letters[loop]);
+        loop = (loop + 1) % letters.length;
     }
+
+    refresh(); // Run immediately
+    setInterval(refresh, 2000); // Repeat every 2 seconds
+
+
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            }
+            else {
+            }
+        });
+    });
+    const hiddenElements = document.querySelectorAll('.hidden')
+    hiddenElements.forEach((el) => observer.observe(el));
+
+    const blurryElements = document.querySelectorAll('.blurry')
+    blurryElements.forEach((element) => element.classList.remove("blurry"))
+};
 
     </script>
 
 
 </head>
+
 <body>
+    
     <nav>
         <button class="navButton">ESZUT-client</button>
         <button class="navButton">companion</button>
     </nav>
 
     <div class="poster">
-        <div class="brand">ESZUT.</div><br>
-        <div class="scroll">
+        <div class="brand blurry">ESZUT.</div><br>
+        <div class="scroll" >
         <div class="scrollText" id="scroll">
             Nowoczesny. <br>Płynny.<br>Lekki.<br>Responsywny.<br>Stabilny.<br>Innowacyjny.<br>Nowoczesny.
         </div>
@@ -46,12 +63,21 @@
         <div class="hero wide"></div>
     </div>
     <br>
-    <h1 class="show-progress">Intuicyjny.</h1>
+
+    <h1 class="hidden">Intuicyjny.</h1>
 
     <div class="intuitive">
     <img class="teacher" src="assets/intuivite.jpg">
         <div style="margin-top: 64px; width: 550px; font-size: 18px; margin-left: 32px;">
-            Eszut to nowoczesna i intuicyjna platforma, stworzona z myślą o usprawnieniu codziennej pracy w placówkach edukacyjnych. Niezależnie od tego, czy jesteś administratorem szkolnym, czy nauczycielem, Eszut pozwoli Ci zarządzać zgłoszeniami i problemami technicznymi w sposób szybki, wygodny i efektywny. Dzięki przejrzystemu interfejsowi oraz inteligentnym funkcjom, każda osoba korzystająca z platformy może łatwo zgłaszać usterki, śledzić ich status oraz komunikować się z działem technicznym bez zbędnych formalności. Korzystanie z Eszut jest tak proste, jak podłączenie myszki do komputera – wystarczy kilka kliknięć, aby skutecznie rozwiązać problem i zapewnić sprawne funkcjonowanie szkolnej infrastruktury.        </div>
+            Eszut to nowoczesna i intuicyjna platforma, stworzona z myślą o usprawnieniu codziennej pracy w placówkach edukacyjnych.<br>Niezależnie od tego, czy jesteś administratorem szkolnym, czy nauczycielem, Eszut pozwoli Ci zarządzać zgłoszeniami i problemami technicznymi w sposób szybki, wygodny i efektywny.<br>Dzięki przejrzystemu interfejsowi oraz inteligentnym funkcjom, każda osoba korzystająca z platformy może łatwo zgłaszać usterki, śledzić ich status oraz komunikować się z działem technicznym bez zbędnych formalności.<br><br>Korzystanie z Eszut'a jest tak proste, jak podłączenie myszki do komputera – wystarczy kilka kliknięć, aby skutecznie rozwiązać problem i zapewnić sprawne funkcjonowanie szkolnej infrastruktury.        </div>
 </div>
+<svg>
+    <filter id="grainy">
+        <feTurbulence
+            type="turbulence"
+            baseFrequency="0.65"
+        />
+    </filter>
+</svg>
 </body>
 </html>
