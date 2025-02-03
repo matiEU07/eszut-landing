@@ -53,10 +53,14 @@ body{
   font-family: sfProDisplay;
   color: var(--mainText);
 }
-
+.intuitive{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .poster{
     padding-top: 40px;
-    height: 700px;
+    height: 950px;
     background-color: rgb(26, 26, 26);
     overflow: hidden;
     text-align: center;
@@ -68,7 +72,7 @@ body{
     font-size: 100px;
     width: 100%;
     height: 100px;
-    margin-top: 50px;
+    margin-top: 200px;
     background-color: rgba(255, 0, 0, 0);
 }
 
@@ -78,39 +82,12 @@ body{
     overflow: hidden;
     font-size: 24px;
 }
-.scrollText{
-    transition: 1s;
-
-}
-.scrollText.q{
-    margin-top: 0px;
-    transition: 0s;
-}
-.scrollText.w{
-    margin-top: -28px;
-}
-.scrollText.e{
-    margin-top: -57px;
-}
-.scrollText.r{
-    margin-top: -86px;
-}
-.scrollText.t{
-    margin-top: -115px;
-}
-.scrollText.y{
-    margin-top: -144px;
-}
-.scrollText.u{
-    margin-top: -174px;
-}
-
 
 .hero{
     height: 967px;
     width: 1207px;
     background-image: url("assets/hero.png");
-    margin-top: 130px;
+    margin-top: 50px;
     margin-right: -200px;
     margin-left: auto;
 }
@@ -119,54 +96,22 @@ body{
     background-image: url("assets/heroWide.png");
 
 }
-/*=================================FONT STUFF================================*/
 
-@font-face {
-  font-family: sfProDisplay;
-  font-weight:bold;
-  src: url("fonts/SFPRODISPLAYBOLD.OTF") format("opentype");
+h1{
+    width: 100%;
+    text-align: center;
+    font-family: sfProDisplay;
+    font-size: 48px;
+    font-weight: lighter;
+    margin-bottom: 0px;
 }
-
-@font-face {
-  font-family: sfProDisplay;
-  font-weight:medium;
-  src: url("fonts/SFPRODISPLAYMEDIUM.OTF") format("opentype");
+.teacher{
+    margin-top: 64px;
+    filter: grayscale();
+    transition: 0.5s;
 }
-@font-face {
-  font-family: sfProDisplay;
-  font-weight:bolder;
-  src: url("fonts/SFPRODISPLAYBLACKITALIC.OTF") format("opentype");
-}
-@font-face {
-  font-family: sfProDisplay;
-  font-weight:normal;
-  src: url("fonts/SFPRODISPLAYREGULAR.OTF") format("opentype");
-}
-
-@font-face {
-  font-family: sfMono;
-  font-weight:bold;
-  src: url("fonts/SFPRODISPLAYBOLD.OTF") format("opentype");
-}
-
-@font-face {
-  font-family: sfMono;
-  font-weight:medium;
-  src: url("fonts/SFPRODISPLAYMEDIUM.OTF") format("opentype");
-}
-@font-face {
-  font-family: sfMono;
-  font-weight:bolder;
-  src: url("fonts/SFPRODISPLAYBLACKITALIC.OTF") format("opentype");
-}
-@font-face {
-  font-family: sfMono;
-  font-weight:normal;
-  src: url("fonts/SFMONO/SFMONOREGULAR.otf") format("opentype");
-}
-@font-face {
-  font-family: Eretro;
-  src: url("fonts/Eretro.ttf") format("truetype");
+.teacher:hover{
+    filter: none;
 }
 ::-moz-selection {
   color: var(--accentColor);

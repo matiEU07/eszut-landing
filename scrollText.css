@@ -1,0 +1,76 @@
+.scrollText{
+    transition: 1s;
+
+}
+.scrollText.q{
+    margin-top: 0px;
+    transition: 0s;
+}
+.scrollText.w{
+    margin-top: -28px;
+}
+.scrollText.e{
+    margin-top: -57px;
+}
+.scrollText.r{
+    margin-top: -86px;
+}
+.scrollText.t{
+    margin-top: -115px;
+}
+.scrollText.y{
+    margin-top: -144px;
+}
+.scrollText.u{
+    margin-top: -174px;
+}
+
+/*=================================FONT STUFF================================*/
+
+@font-face {
+    font-family: sfProDisplay;
+    font-weight:bold;
+    src: url("fonts/SFPRODISPLAYBOLD.OTF") format("opentype");
+  }
+  
+  @font-face {
+    font-family: sfProDisplay;
+    font-weight:medium;
+    src: url("fonts/SFPRODISPLAYMEDIUM.OTF") format("opentype");
+  }
+  @font-face {
+    font-family: sfProDisplay;
+    font-weight:bolder;
+    src: url("fonts/SFPRODISPLAYBLACKITALIC.OTF") format("opentype");
+  }
+  @font-face {
+    font-family: sfProDisplay;
+    font-weight:normal;
+    src: url("fonts/SFPRODISPLAYREGULAR.OTF") format("opentype");
+  }
+  
+  @font-face {
+    font-family: sfMono;
+    font-weight:bold;
+    src: url("fonts/SFPRODISPLAYBOLD.OTF") format("opentype");
+  }
+  
+  @font-face {
+    font-family: sfMono;
+    font-weight:medium;
+    src: url("fonts/SFPRODISPLAYMEDIUM.OTF") format("opentype");
+  }
+  @font-face {
+    font-family: sfMono;
+    font-weight:bolder;
+    src: url("fonts/SFPRODISPLAYBLACKITALIC.OTF") format("opentype");
+  }
+  @font-face {
+    font-family: sfMono;
+    font-weight:normal;
+    src: url("fonts/SFMONO/SFMONOREGULAR.otf") format("opentype");
+  }
+  @font-face {
+    font-family: Eretro;
+    src: url("fonts/Eretro.ttf") format("truetype");
+  }
