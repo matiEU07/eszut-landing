@@ -1,0 +1,192 @@
+:root {
+    --cornerSize: 8px;
+    --smallCornerSize: 4px;
+    --defaultPadding: 8px;
+    --pageBackBG: #333333;
+    --pageForeBG: #2b2b2b;
+    --navBarColor: #1b1a1b9d;
+    --mainText: #B8B8B8;
+    --secondaryText: #ffffff6f;
+    --buttonText: #ffffffa0;
+    --accentColor: #FF7060;
+    --borderColor: #1d1d1d;
+    --windowBorderColor: rgba(255, 255, 255, 0.120);
+    --windowTopBorderColor: rgba(255, 255, 255, 0.205);
+    --tableAccent: #1d1d1d;
+}
+
+nav {
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+  text-align: left;
+  background-color: var(--navBarColor);
+  filter: drop-shadow(0px 0px 5px #0000005a);
+  padding: var(--defaultPadding);
+  -webkit-backdrop-filter: blur(20px); /*fixes blur for Safari*/
+  backdrop-filter: blur(20px);
+  border-bottom: #ffffff53;
+  border-bottom-width: 1px;
+  border-bottom-style: outset;
+  display: flex;
+  transition: 0.5s;
+  cursor: default;
+}
+.navButton{
+  background: none;
+  color: var(--mainText);
+  font-family: sfProDisplay;
+  border: none;
+  margin-right: var(--defaultPadding);
+}
+.navButton:hover{
+    color: white;
+}
+.navButton:active{
+    color: var(--accentColor);
+}
+
+body{
+  background-color: var(--pageBackBG);
+  padding: 0px;
+  margin: 0px;
+  font-family: sfProDisplay;
+  color: var(--mainText);
+}
+
+.poster{
+    padding-top: 40px;
+    height: 700px;
+    background-color: rgb(26, 26, 26);
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.233);
+}
+
+
+.brand{
+    font-size: 100px;
+    width: 100%;
+    height: 100px;
+    margin-top: 50px;
+    background-color: rgba(255, 0, 0, 0);
+}
+
+.scroll{
+    background-color: rgba(14, 14, 14, 0);
+    height: 32px;
+    overflow: hidden;
+    font-size: 24px;
+}
+.scrollText{
+    transition: 1s;
+
+}
+.scrollText.q{
+    margin-top: 0px;
+    transition: 0s;
+}
+.scrollText.w{
+    margin-top: -28px;
+}
+.scrollText.e{
+    margin-top: -57px;
+}
+.scrollText.r{
+    margin-top: -86px;
+}
+.scrollText.t{
+    margin-top: -115px;
+}
+.scrollText.y{
+    margin-top: -144px;
+}
+.scrollText.u{
+    margin-top: -174px;
+}
+
+
+.hero{
+    height: 967px;
+    width: 1207px;
+    background-image: url("assets/hero.png");
+    margin-top: 130px;
+    margin-right: -200px;
+    margin-left: auto;
+}
+.hero.wide{
+    width: 1908px;
+    background-image: url("assets/heroWide.png");
+
+}
+/*=================================FONT STUFF================================*/
+
+@font-face {
+  font-family: sfProDisplay;
+  font-weight:bold;
+  src: url("fonts/SFPRODISPLAYBOLD.OTF") format("opentype");
+}
+
+@font-face {
+  font-family: sfProDisplay;
+  font-weight:medium;
+  src: url("fonts/SFPRODISPLAYMEDIUM.OTF") format("opentype");
+}
+@font-face {
+  font-family: sfProDisplay;
+  font-weight:bolder;
+  src: url("fonts/SFPRODISPLAYBLACKITALIC.OTF") format("opentype");
+}
+@font-face {
+  font-family: sfProDisplay;
+  font-weight:normal;
+  src: url("fonts/SFPRODISPLAYREGULAR.OTF") format("opentype");
+}
+
+@font-face {
+  font-family: sfMono;
+  font-weight:bold;
+  src: url("fonts/SFPRODISPLAYBOLD.OTF") format("opentype");
+}
+
+@font-face {
+  font-family: sfMono;
+  font-weight:medium;
+  src: url("fonts/SFPRODISPLAYMEDIUM.OTF") format("opentype");
+}
+@font-face {
+  font-family: sfMono;
+  font-weight:bolder;
+  src: url("fonts/SFPRODISPLAYBLACKITALIC.OTF") format("opentype");
+}
+@font-face {
+  font-family: sfMono;
+  font-weight:normal;
+  src: url("fonts/SFMONO/SFMONOREGULAR.otf") format("opentype");
+}
+@font-face {
+  font-family: Eretro;
+  src: url("fonts/Eretro.ttf") format("truetype");
+}
+::-moz-selection {
+  color: var(--accentColor);
+  background: #362929;
+}
+
+::selection {
+  color: var(--accentColor);
+  background: #362929;
+}
+
+.logo{
+  font-family: 'sfProDisplay';
+  font-weight: bolder;
+  transition: 1s;
+  font-size: 25px;
+  width: 80px;
+}
+.logo:hover{
+  color: var(--accentColor);
+  transition: 1s;
+  cursor: pointer;
+}

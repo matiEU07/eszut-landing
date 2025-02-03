@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>About ESZUT</title>
+
+    <script>
+
+        loop = 0
+        letters=["q", "w", "e", "r", "t", "y", "u"]
+
+        window.onload = function () {
+        refresh(); // Run immediately on refresh
+        setInterval(refresh, 2000); // Repeat every 1 second
+    };
+
+    function refresh() {
+        scrollText = document.getElementById("scroll")
+        loop++
+        if(loop>6) {loop=0}
+        console.log(loop)
+        if (loop>0) scrollText.classList.remove(letters[loop-1]); else scrollText.classList.remove(letters[6])
+        scrollText.classList.add(letters[loop]);
+    }
+
+    </script>
+
+
+</head>
+<body>
+    <nav>
+        <button class="navButton">ESZUT-client</button>
+        <button class="navButton">companion</button>
+    </nav>
+
+    <div class="poster">
+        <div class="brand">ESZUT.</div><br>
+        <div class="scroll">
+        <div class="scrollText" id="scroll">
+            Nowoczesny. <br>Płynny.<br>Lekki.<br>Responsywny.<br>Stabilny.<br>Innowacyjny.<br>Nowoczesny.
+        </div>
+        </div><br>
+        <div class="hero wide"></div>
+
+    </div>
+</body>
+</html>
