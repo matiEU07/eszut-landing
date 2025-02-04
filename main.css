@@ -56,7 +56,7 @@ body{
 }
 .poster{
     padding-top: 40px;
-    height: 950px;
+    height: 100vh;
     background-color: rgb(26, 26, 26);
     overflow: hidden;
     text-align: center;
