@@ -9,7 +9,7 @@
     <title>About ESZUT</title>
 
     <script>
-    window.onload = function () {
+window.onload = function () {
     const scrollText = document.getElementById("scroll");
     const letters = ["q", "w", "e", "r", "t", "y", "u"];
     let loop = 0;
@@ -23,23 +23,33 @@
     refresh(); // Run immediately
     setInterval(refresh, 2000); // Repeat every 2 seconds
 
-
+    const wideobserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('wideNormal');
+            }
+        });
+    });
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('show');
             }
-            else {
-            }
         });
     });
-    const hiddenElements = document.querySelectorAll('.hidden')
+
+    const hiddenElements = document.querySelectorAll('.hidden');
     hiddenElements.forEach((el) => observer.observe(el));
 
-    const blurryElements = document.querySelectorAll('.blurry')
-    blurryElements.forEach((element) => element.classList.remove("blurry"))
+    const blurryElements = document.querySelectorAll('.blurry');
+    blurryElements.forEach((element) => element.classList.remove("blurry"));
+
+    // Fix: Iterate over elements instead of passing a collection
+    const wide = document.getElementsByClassName("wideIN");
+    Array.from(wide).forEach((el) => wideobserver.observe(el));
 };
+
 
     </script>
 
@@ -70,7 +80,25 @@
     <img class="teacher" src="assets/intuivite.jpg">
         <div style="margin-top: 64px; width: 550px; font-size: 18px; margin-left: 32px;">
             Eszut to nowoczesna i intuicyjna platforma, stworzona z myślą o usprawnieniu codziennej pracy w placówkach edukacyjnych.<br>Niezależnie od tego, czy jesteś administratorem szkolnym, czy nauczycielem, Eszut pozwoli Ci zarządzać zgłoszeniami i problemami technicznymi w sposób szybki, wygodny i efektywny.<br>Dzięki przejrzystemu interfejsowi oraz inteligentnym funkcjom, każda osoba korzystająca z platformy może łatwo zgłaszać usterki, śledzić ich status oraz komunikować się z działem technicznym bez zbędnych formalności.<br><br>Korzystanie z Eszut'a jest tak proste, jak podłączenie myszki do komputera – wystarczy kilka kliknięć, aby skutecznie rozwiązać problem i zapewnić sprawne funkcjonowanie szkolnej infrastruktury.        </div>
-</div>
+    </div>
+
+    <div class="fast">
+    <h1 class="hidden">szybki.</h1>
+    <div class="intuitive">
+    <img class="teacher" src="assets/fast.jpg">
+        <div style="margin-top: 64px; width: 550px; font-size: 18px; margin-left: 32px;">
+            haha eszut robi vroom vroom
+        </div>
+    </div>
+
+    <div class="light">
+        <h1 class="wideIN">lekki.</h1>
+        <div class="intuitive">
+        <img class="teacher" src="assets/light.jpg" height="480px">
+            <div style="margin-top: 64px; width: 550px; font-size: 18px; margin-left: 32px;">
+                eszut jest na tyle lekki że zadziała na każdym osprzętowaniu szkolnym, niezależnie od jego wieku. ten monolog będzie kontynuowany w przyszłości.
+            </div>
+        </div>
 <svg>
     <filter id="grainy">
         <feTurbulence

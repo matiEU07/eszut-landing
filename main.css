@@ -54,11 +54,6 @@ body{
   font-family: sfProDisplay;
   color: var(--mainText);
 }
-.intuitive{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 .poster{
     padding-top: 40px;
     height: 950px;
@@ -68,7 +63,31 @@ body{
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.233);
     background: linear-gradient(352deg, rgba(26,26,26,1) 0%, rgba(46,30,28,1) 100%); 
 }
+.intuitive{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 128px;
+}
+.fast{
+    padding-top: 32px;
 
+    background-color: rgb(26, 26, 26);
+}
+.light{
+    padding-top: 32px;
+    background-color: white;
+    color: black;
+    
+}
+.wideIN{
+    letter-spacing: 250px;
+    transition: 5s
+}
+.wideNormal{
+    letter-spacing: 17px;
+    font-weight: 50;
+}
 .blurry{filter: blur(20px) !important}
 .brand{
     font-size: 100px;
@@ -117,7 +136,6 @@ h1{
     background-size: 20% 100%;
     background-clip: text;        
     transition: 3s;
-    transition-delay: 0.5s;
 }
 .show{
 background-size: 80% 100%;
